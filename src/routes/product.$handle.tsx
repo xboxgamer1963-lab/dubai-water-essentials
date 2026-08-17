@@ -1,5 +1,4 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { useSuspenseQuery } from "@tanstack/react-query";
 import { Loader2, Minus, Plus, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 
@@ -30,7 +29,7 @@ export const Route = createFileRoute("/product/$handle")({
 });
 
 function ProductPage() {
-  const product = Route.useLoaderData<ShopifyProduct["node"]>();
+  const product = Route.useLoaderData();
   const addItem = useCartStore((state) => state.addItem);
   const isLoading = useCartStore((state) => state.isLoading);
 
