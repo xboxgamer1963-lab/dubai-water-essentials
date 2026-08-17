@@ -1,14 +1,22 @@
-# Welcome to your Lovable project
+# Dubai Water Essentials
+
+Hello, need to make an e-commerce store for a company that sells Plastic products, mainly Small Water Dispensers, Water Bottles, Hangers etc. 
+
+The business is based in Dubai so we need to be careful about that as well! 
+
+Can you help?
+
+Need to link to shopify as well!
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4253a47e-30b0-465d-b8f9-086cdd53754a).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +28,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
