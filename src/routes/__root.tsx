@@ -99,6 +99,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Karla:wght@300;400;500;600;700&display=swap",
+      },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
@@ -124,11 +130,23 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="text-xl font-bold tracking-tight text-foreground">
-          Delite UAE
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur">
+      <div className="container mx-auto flex h-20 items-center justify-between px-6">
+        <Link to="/" className="flex flex-col leading-none">
+          <span className="font-display text-2xl tracking-[0.2em] text-primary">DELITE</span>
+          <span className="text-[0.6rem] uppercase tracking-[0.45em] text-accent">Dubai · UAE</span>
         </Link>
+        <nav className="hidden items-center gap-10 text-xs uppercase tracking-[0.25em] text-muted-foreground md:flex">
+          <Link to="/" className="transition-colors hover:text-primary">
+            Home
+          </Link>
+          <a href="#collection" className="transition-colors hover:text-primary">
+            Collection
+          </a>
+          <a href="#about" className="transition-colors hover:text-primary">
+            About
+          </a>
+        </nav>
         <CartDrawer />
       </div>
     </header>
