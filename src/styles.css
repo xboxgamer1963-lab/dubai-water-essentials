@@ -19,6 +19,10 @@
  */
 
 @theme inline {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --color-sand: var(--sand);
+  --color-sand-foreground: var(--sand-foreground);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,26 +66,28 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.985 0.01 95);
-  --foreground: oklch(0.22 0.03 260);
+  --radius: 0.25rem;
+  --background: oklch(0.975 0.008 85);
+  --foreground: oklch(0.24 0.05 255);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.03 260);
+  --card-foreground: oklch(0.24 0.05 255);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.03 260);
-  --primary: oklch(0.45 0.12 245);
-  --primary-foreground: oklch(0.985 0.01 95);
-  --secondary: oklch(0.94 0.02 245);
-  --secondary-foreground: oklch(0.22 0.03 260);
-  --muted: oklch(0.94 0.02 245);
-  --muted-foreground: oklch(0.5 0.04 250);
-  --accent: oklch(0.92 0.05 85);
-  --accent-foreground: oklch(0.22 0.03 260);
+  --popover-foreground: oklch(0.24 0.05 255);
+  --primary: oklch(0.27 0.07 255);
+  --primary-foreground: oklch(0.97 0.015 80);
+  --secondary: oklch(0.93 0.025 80);
+  --secondary-foreground: oklch(0.27 0.07 255);
+  --muted: oklch(0.94 0.015 80);
+  --muted-foreground: oklch(0.5 0.03 255);
+  --accent: oklch(0.74 0.075 65);
+  --accent-foreground: oklch(0.22 0.05 255);
+  --sand: oklch(0.74 0.075 65);
+  --sand-foreground: oklch(0.22 0.05 255);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.88 0.02 245);
-  --input: oklch(0.88 0.02 245);
-  --ring: oklch(0.55 0.12 245);
+  --border: oklch(0.88 0.02 80);
+  --input: oklch(0.88 0.02 80);
+  --ring: oklch(0.4 0.08 255);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +146,11 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    font-weight: 300;
   }
 }
